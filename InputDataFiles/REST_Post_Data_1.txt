@@ -1,0 +1,34 @@
+[
+    {
+        "customerId": {
+            "customerId": 4000,
+            "brandcode": "Viper"
+        },
+        "company": "Technoelectric Co.",
+        "name": "Hasan",
+        "orderDetails": [
+            {
+                "orderId": "006",
+                "product": "IPhone 10"
+            },
+            {
+                "orderId": "007",
+                "product": "IPad Mini 7"
+            }
+        ]
+    },
+    {
+        "customerId": {
+            "customerId": 5000,
+            "brandcode": "TopNotch"
+        },
+        "company": "Universal Company",
+        "name": "Omar",
+        "orderDetails": [
+            {
+                "orderId": "008",
+                "product": "Samsung Galaxy Note 9"
+            }
+        ]
+    }
+]

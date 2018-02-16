@@ -1,0 +1,18 @@
+ {
+        "customerId": {
+            "customerId": 3000,
+            "brandcode": "acme"
+        },
+        "company": "Acme Co.",
+        "name": "John",
+        "orderDetails": [
+            {
+                "orderId": "004",
+                "product": "IPhone 8"
+            },
+            {
+                "orderId": "005",
+                "product": "IPad Mini 5"
+            }
+        ]
+ }
