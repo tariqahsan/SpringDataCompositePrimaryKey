@@ -1,0 +1,26 @@
+{
+        "customerId": {
+            "customerId": 5000,
+            "brandcode": "Viper"
+        },
+        "company": "Alibaba Co.",
+        "name": "Ali",
+        "orderDetails": [
+            {
+                "orderId": "006",
+                "product": {
+                	"productId": 143,
+                	"productName": "Toshiba Flat TV",
+                	"productDesc": "Toshiba Flat TV 70 inches"
+                }
+            },
+            {
+                "orderId": "007",
+                 "product": {
+                	"productId": 163,
+                	"productName": "Sony Flat TV",
+                	"productDesc": "Sony Flat TV 60 inches"
+                }
+            }
+        ]
+    }

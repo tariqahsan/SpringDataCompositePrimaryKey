@@ -12,6 +12,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import com.javasampleapproach.compositeprimarykey.model.Customer;
 import com.javasampleapproach.compositeprimarykey.model.CustomerId;
 import com.javasampleapproach.compositeprimarykey.model.OrderDetail;
+import com.javasampleapproach.compositeprimarykey.model.Product;
 import com.javasampleapproach.compositeprimarykey.service.CustomerServices;
 import com.javasampleapproach.compositeprimarykey.service.OrderServices;
 
@@ -31,8 +32,8 @@ public class SpringDataCompositePrimaryKeyApplication implements CommandLineRunn
 	@Override
 	public void run(String... args) throws Exception {
 		deleteAll();
-		saveData();
-		showAll();
+		//saveData();
+		//showAll();
 	}
 	
 	public void deleteAll(){
@@ -49,9 +50,12 @@ public class SpringDataCompositePrimaryKeyApplication implements CommandLineRunn
 		// 1. Jack
 		CustomerId jackId = new CustomerId(1000, "azc");
 		Customer jack = new Customer(jackId, "A & Z", "Jack");
+
+		Product product1 = new Product(123, "IPhone 7", "Apple IPhone 7");
+		Product product2 = new Product(165, "IPad Mini 3", "Apple IPad Mini 3");
 		
-		OrderDetail jackIphoneOrder = new OrderDetail("001", "IPhone 7", jack);
-		OrderDetail jackIPadMiniOrder = new OrderDetail("002", "IPad Mini 2", jack);
+		OrderDetail jackIphoneOrder = new OrderDetail("001", jack, product1);
+		OrderDetail jackIPadMiniOrder = new OrderDetail("002", jack, product2);
 		
 		Set<OrderDetail> jackOrderDetails = new HashSet<OrderDetail>(Arrays.asList(jackIphoneOrder, jackIPadMiniOrder));
 		
@@ -61,7 +65,9 @@ public class SpringDataCompositePrimaryKeyApplication implements CommandLineRunn
 		CustomerId maryId = new CustomerId(2000, "mkl");
 		Customer mary = new Customer(maryId, "Fashion Company", "Mary");
 		
-		OrderDetail maryNote7Order = new OrderDetail("003", "Samsung Galaxy Note 7", mary);
+		Product product3 = new Product(123, "Galaxy Note 7", "Samsung Galaxy Note 7");
+		
+		OrderDetail maryNote7Order = new OrderDetail("003", mary, product3);
 		
 		Set<OrderDetail> maryOrderDetails = new HashSet<OrderDetail>(Arrays.asList(maryNote7Order));
 		
